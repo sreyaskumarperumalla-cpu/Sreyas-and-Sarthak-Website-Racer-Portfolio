@@ -60,7 +60,7 @@
            Our project features a custom method called checkCollision(p, n) that acts for the game’s physics. This method takes two specific objects—the player and an NPC—and calculates the distance between their 3D coordinates. After performing the math, it returns a Boolean value: true if a collision is detected, or false if the path is clear.
 
 Why it was useful:
-By using a return value, we successfully separated the "math logic" from the "game action." This made our code much more organized; the main drawing loop doesn't need to understand the complex geometry of a hit-box, it only needs the "yes or no" answer provided by the return. This modularity allowed us to easily tweak the difficulty of the game in one place without accidentally breaking the rendering or movement code elsewhere.
+By using a return value, we successfully separated the "math logic" from the "game action." This made our code much more organized; the main drawing loop doesn't need to understand the complex geometry of a hit-box, it only needs the "yes or no" answer provided by the return. This method allowed us to tweak the game to increase difficulty as the player accelerates.
         </p>
     </section>
 
