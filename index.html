@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio: 3D Racing Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Live 3d infinite highway racer: Portfolio</h1>
+    <p class="subtitle">A project by Sreyas P and Sarthak P.</p>
+</header>
+
+<div class="container">
+    <div class="repo-section">
+        <a href="https://github.com/MCST-CIS/spring-dev-project-sarthak-and-sreyas-racing-game" class="github-link">(View Source Code on GitHub) down below is the version of the highway racer without the mobile controller.</a>
+    </div>
+
+    <div id="canvas-container">
+        </div>
+
+    <section>
+        <h2>Project Overview</h2>
+        <p>
+            "3D Racer: Insane Mode" is a project intended to bring the user a unique arcade highway racing experience by using two devices simultaneously. Developed using p5.js for the rendering engine and Node.js with Socket.io for the networking layer, this project allows users to utilize a mobile device as a dedicated controller. Our goal was to make a car game with a controller, since we took on that challenge there were several issues that we had to overcome. But at the end of the day, we had made a fully working highway racer with a phone as a controller. 
+        </p>
+    </section>
+
+    <section>
+        <h2>Technical Instructions</h2>
+        <div class="instructions-box">
+            <ul>
+                <li><strong>Local Deployment:</strong> Initialize the Node.js server. The primary display acts as the game engine, while the <code>/controller.html</code> route serves the mobile UI.</li>
+                <li><strong>Desktop Input:</strong> Standard movement is mapped to <code>WASD</code> and <code>Arrow Keys</code>.</li>
+                <li><strong>Network Input:</strong> Mobile controller/html would connect to the internet and through socket.io reach the server, which the server would be online to store and provide information about steering.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Learning Goal: Methods with Parameters</h2>
+        <div class="screenshot-placeholder">
+            <img src="pic1.png" alt="Code snippet of parameter method">
+        </div>
+        <p>
+            This method is like a reusable method for our cars. Instead of writing out the long instructions for drawing a 3D car over and over again, we wrote them once and added a "slot" called bodyColor. This slot is the parameter. When we want a red car for the player, we put "red" into that slot. When we want a blue car for traffic, we put "blue" in.
+        </p>
+    </section>
+
+    <section>
+        <h2>Learning Goal: Return Values</h2>
+        <div class="screenshot-placeholder">
+            <img src="image.png" alt="Code snippet of return method">
+        </div>
+        <p>
+           Our project features a custom method called checkCollision(p, n) that acts for the game’s physics. This method takes two specific objects—the player and an NPC—and calculates the distance between their 3D coordinates. After performing the math, it returns a Boolean value: true if a collision is detected, or false if the path is clear.
+
+Why it was useful:
+By using a return value, we successfully separated the "math logic" from the "game action." This made our code much more organized; the main drawing loop doesn't need to understand the complex geometry of a hit-box, it only needs the "yes or no" answer provided by the return. This modularity allowed us to easily tweak the difficulty of the game in one place without accidentally breaking the rendering or movement code elsewhere.
+        </p>
+    </section>
+
+    <section>
+        <h2>LLM Reflection</h2>
+        <p>
+            We had used Gemini to create pieces of the project structure to help us create the fully working project. We had used Gemini to create complex game physics code, and all of the time consuming and tedious code for us. With using LLMs, we also have the oppurtunity to learn how to integrate and adapt to LLMs into our software development process. But we had also learned that, it also gives you the oppurtunity to explore new programming concepts such as back-end development and game design.
+        </p>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Developed by Sarthak P and Sreyas P | 
+</footer>
+
+<script src="sketch.js"></script>
+</body>
+</html>
