@@ -1,12 +1,12 @@
 :root {
     /* Professional Color Palette */
-    --primary-accent: #3b82f6; /* Modern Professional Blue */
-    --secondary-accent: #60a5fa;
-    --bg-deep: #0f172a;        /* Slate 900 */
-    --card-bg: #1e293b;        /* Slate 800 */
-    --text-main: #f8fafc;      /* Slate 50 */
-    --text-muted: #94a3b8;     /* Slate 400 */
-    --border-color: #334155;   /* Slate 700 */
+    --primary-accent: #f6513b; /* Modern Professional Blue */
+    --secondary-accent: #ff0000;
+    --bg-deep: #6e0c0c;        /* Slate 900 */
+    --card-bg: #000000;        /* Slate 800 */
+    --text-main: #7c0000;      /* Slate 50 */
+    --text-muted: #ffffff;     /* Slate 400 */
+    --border-color: #000000;   /* Slate 700 */
 }
 
 * {
@@ -105,7 +105,7 @@ p {
 }
 
 .github-link:hover {
-    background-color: #2563eb;
+    background-color: #962222;
 }
 
 /* Embedded Game / Screen Capture */
